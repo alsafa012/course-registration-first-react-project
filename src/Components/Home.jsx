@@ -9,6 +9,7 @@ const Home = () => {
      const [selectedBtn ,setSelectedBtn] = useState([]);
      const [totalCredit ,setTotalCredit] = useState(0);
      const [remainingCredits ,setRemainingCredits] = useState(0);
+     // const [totalCost ,setTotalCost] = useState(0);
 
      useEffect(() => {
           fetch("./data.json")
@@ -19,17 +20,22 @@ const Home = () => {
 
      const handleSelectBtn =(item)=>{
           let count = item.credit;
-         
+          const isExist = selectedBtn.find(arr=> arr.id === item.id)
+          if(isExist){
+          return alert('already selected')
+          }else{
                selectedBtn.forEach(data=>{
                     count = count + data.credit;
                })
                const remainingCredit = 20 - count;
-               // console.log('remaining: ', remainingCredit)
+               if(count > 20){
+                    return alert('remaining credits')
+               }
                setRemainingCredits(remainingCredit)
                setTotalCredit(count)
                const newData = [...selectedBtn,item]
                setSelectedBtn(newData)
-          // }
+          }
           console.log(count)
      }
      
