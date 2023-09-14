@@ -1,0 +1,75 @@
+[
+     {
+         "id": 1,
+         "course_name": "Introduction to C Programming",
+         "img": "https://i.ibb.co/42PxrVp/c-programming.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 2,
+         "course_name": "Introduction to Algorithms",
+         "img": "https://i.ibb.co/gWgKB72/algorithm.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 3,
+         "course_name": "Introduction to C++ for DSA",
+         "img": "https://i.ibb.co/61FPswm/c.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 4,
+         "course_name": "Basic Data Structures",
+         "img": "https://i.ibb.co/jvXhRgv/data-structure.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 5,
+         "course_name": "Introduction to OOP Python",
+         "img": "https://i.ibb.co/f95PBxy/Rectangle-2.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 6,
+         "course_name": "Software Engineering",
+         "img": "https://i.ibb.co/fHkFFGz/sofrwere-base.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 7,
+         "course_name": "AWS, Cloud Computing",
+         "img": "https://i.ibb.co/GdJMTnZ/aws.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 8,
+         "course_name": "Database (MySQL)",
+         "img": "https://i.ibb.co/02njNmZ/mysql.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     },
+     {
+         "id": 9,
+         "course_name": "Problem-Solving Part",
+         "img": "https://i.ibb.co/nD4f0Th/Rectangle-2-6.png",
+         "title": "Top 10 ES6 Features You Must Know",
+         "price": 1000,
+         "credit": 2
+     }
+ ]
+ 
