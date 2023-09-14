@@ -16,9 +16,9 @@ const Home = () => {
      return (
           <div className="container mx-auto bg-[#F3F3F3]">
                <h1 className="text-center font-bold text-3xl my-10">Course Registration</h1>
-               <div className="flex gap-5">
+               <div className=" md:flex gap-5">
                     {/* cards div */}
-                    <div className="flex-1 grid md:grid-cols-3 gap-3 ">
+                    <div className="flex-1 grid md:grid-cols-2 lg:grid-cols-3 gap-3 ">
                          {allData.map((data) => (
                               <div className=" bg-white rounded-xl ml-2" key={data.id}>
                                    <div className="p-3 space-y-2">
@@ -48,7 +48,7 @@ const Home = () => {
                          ))}
                     </div>
                     {/* end cards div */}
-                    <div className="w-[300px] border">
+                    <div className="w-[300px] mt-10 md:mt-0 mx-auto">
                          <Cart></Cart>
                     </div>
 
