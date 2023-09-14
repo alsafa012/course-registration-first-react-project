@@ -1,4 +1,4 @@
-// import React from 'react';
+
 import PropTypes from "prop-types";
 const Card = ({ selectedBtn, totalCredit, remainingCredits, totalCost }) => {
      return (
@@ -10,7 +10,9 @@ const Card = ({ selectedBtn, totalCredit, remainingCredits, totalCost }) => {
                {selectedBtn.map((btn) => (
                     <div key={btn.id} className="">
                          <div>
-                              <li> {btn.course_name} </li>
+                              
+                                   <li>{btn.course_name} </li>
+                    
                          </div>
                     </div>
                ))}
