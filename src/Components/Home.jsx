@@ -3,13 +3,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Cart from "./Cart";
+import { BiBookOpen } from 'react-icons/bi';
+import { LuDollarSign } from 'react-icons/lu';
 
 const Home = () => {
      const [allData, setData] = useState([]);
      const [selectedBtn ,setSelectedBtn] = useState([]);
      const [totalCredit ,setTotalCredit] = useState(0);
      const [remainingCredits ,setRemainingCredits] = useState(0);
-     // const [totalCost ,setTotalCost] = useState(0);
+     const [totalCost ,setTotalCost] = useState(0);
 
      useEffect(() => {
           fetch("./data.json")
@@ -20,17 +22,20 @@ const Home = () => {
 
      const handleSelectBtn =(item)=>{
           let count = item.credit;
+          let cost = item.price;
           const isExist = selectedBtn.find(arr=> arr.id === item.id)
           if(isExist){
           return alert('already selected')
           }else{
                selectedBtn.forEach(data=>{
                     count = count + data.credit;
+                    cost = cost + data.price
                })
                const remainingCredit = 20 - count;
                if(count > 20){
                     return alert('remaining credits')
                }
+               setTotalCost(cost)
                setRemainingCredits(remainingCredit)
                setTotalCredit(count)
                const newData = [...selectedBtn,item]
@@ -64,10 +69,11 @@ const Home = () => {
                                              {data.title}
                                         </p>
                                    </div>
-                                   <div className="flex gap-2 justify-between">
-                                        <p>*</p>
+                                   <div className="flex gap-2 justify-between items-center">
+                                        <p className="text-2xl"><LuDollarSign></LuDollarSign></p>
                                         <p>Price : {data.price}</p>
-                                        <p>*</p>
+                                        <p className="text-2xl"><BiBookOpen></BiBookOpen></p>
+                                        {/* <p><BsBook></BsBook></p> */}
                                         <p>Credit : {data.credit}hr</p>
                                    </div>
                                    <div className=" text-center">
@@ -79,7 +85,7 @@ const Home = () => {
                     </div>
                     {/* end cards div */}
                     <div className="w-[300px] mt-10 md:mt-0 mx-auto md:mr-2">
-                         <Cart selectedBtn={selectedBtn} remainingCredits={remainingCredits} totalCredit={totalCredit}></Cart>
+                         <Cart totalCost={totalCost} selectedBtn={selectedBtn} remainingCredits={remainingCredits} totalCredit={totalCredit}></Cart>
                     </div>
 
                     {/* parent div */}

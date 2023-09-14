@@ -1,11 +1,10 @@
 // import React from 'react';
 
-const Cart = ({ selectedBtn ,totalCredit ,remainingCredits}) => {
+const Cart = ({ selectedBtn ,totalCredit ,remainingCredits ,totalCost}) => {
      // console.log(selectedBtn)
      // const { id } = selectedBtn;
      return (
           <div className="bg-white rounded-xl p-5 space-y-5"> 
-               <p className="font-bold text-center">Cart Section</p>
                <h4 className="border-b-2 text-[#2F80ED] font-semibold text-xl py-4">Credit Hour Remaining : {remainingCredits}hr</h4>
                <h1 className="font-bold text-2xl my-2">Course Name</h1>
                {selectedBtn.map((btn) => (
@@ -15,10 +14,9 @@ const Cart = ({ selectedBtn ,totalCredit ,remainingCredits}) => {
                          </div>
                     </div>
                ))}
-               <h2 className="border-y-2 py-4">Total Credit Hour : {totalCredit}</h2>
-               <h3>Total Price : {} USD</h3>
+               <h2 className="border-y-2 py-4 font-medium">Total Credit Hour : {totalCredit}</h2>
+               <h3 className="font-medium">Total Price : {totalCost} USD</h3>
           </div>
      );
 };
-
 export default Cart;
