@@ -2,9 +2,11 @@
 
 import { useEffect } from "react";
 import { useState } from "react";
-import Cart from "./Cart";
+// import Cart from "./Cart";
+
 import { BiBookOpen } from 'react-icons/bi';
 import { LuDollarSign } from 'react-icons/lu';
+import Card from "./Card";
 
 const Home = () => {
      const [allData, setData] = useState([]);
@@ -73,7 +75,6 @@ const Home = () => {
                                         <p className="text-2xl"><LuDollarSign></LuDollarSign></p>
                                         <p>Price : {data.price}</p>
                                         <p className="text-2xl"><BiBookOpen></BiBookOpen></p>
-                                        {/* <p><BsBook></BsBook></p> */}
                                         <p>Credit : {data.credit}hr</p>
                                    </div>
                                    <div className=" text-center">
@@ -85,7 +86,7 @@ const Home = () => {
                     </div>
                     {/* end cards div */}
                     <div className="w-[300px] mt-10 md:mt-0 mx-auto md:mr-2">
-                         <Cart totalCost={totalCost} selectedBtn={selectedBtn} remainingCredits={remainingCredits} totalCredit={totalCredit}></Cart>
+                         <Card totalCost={totalCost} selectedBtn={selectedBtn} remainingCredits={remainingCredits} totalCredit={totalCredit}></Card>
                     </div>
 
                     {/* parent div */}
