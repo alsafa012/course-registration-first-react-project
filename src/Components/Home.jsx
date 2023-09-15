@@ -36,7 +36,7 @@ const Home = () => {
                const remainingCredit = 20 - count;
                if (count > 20) {
                     return Swal.fire({
-                         icon: "error",
+                         icon: "warning",
                          title: "Credit Limit Exist!!!",
                          text: "#cannot add more!!",
                     });
