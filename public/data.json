@@ -3,7 +3,7 @@
           "id": 1,
           "course_name": "Introduction to C Programming",
           "img": "https://i.ibb.co/42PxrVp/c-programming.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "C programming is a foundational language known for its simplicity and power, widely used for system-level programming and software development.",
           "price": 15000,
           "credit": 1
      },
@@ -11,7 +11,7 @@
           "id": 2,
           "course_name": "Introduction to Algorithms",
           "img": "https://i.ibb.co/gWgKB72/algorithm.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Algorithms are step-by-step procedures or methods used to solve problems efficiently, playing a crucial role in computer science and problem-solving.",
           "price": 25000,
           "credit": 2
      },
@@ -19,7 +19,7 @@
           "id": 3,
           "course_name": "Introduction to C++ for DSA",
           "img": "https://i.ibb.co/61FPswm/c.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "C++ is a versatile programming language often used for Data Structures and Algorithms (DSA), offering powerful tools for efficient problem-solving.",
           "price": 10000,
           "credit": 10
      },
@@ -27,7 +27,7 @@
           "id": 4,
           "course_name": "Basic Data Structures",
           "img": "https://i.ibb.co/jvXhRgv/data-structure.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Basic data structures are fundamental elements in computer science, such as arrays, linked lists, and trees, used for organizing and manipulating data efficiently.",
           "price": 35000,
           "credit": 5
      },
@@ -35,7 +35,7 @@
           "id": 5,
           "course_name": "Introduction to OOP Python",
           "img": "https://i.ibb.co/f95PBxy/Rectangle-2.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Object-Oriented Programming (OOP) in Python emphasizes the use of objects and classes to model and structure code, promoting modularity and code reusability.",
           "price": 19000,
           "credit": 5
      },
@@ -43,7 +43,7 @@
           "id": 6,
           "course_name": "Software Engineering",
           "img": "https://i.ibb.co/fHkFFGz/sofrwere-base.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Software engineering is a systematic approach to designing, developing, testing, and maintaining software systems to ensure reliability, scalability, and efficiency.",
           "price": 23000,
           "credit": 2
      },
@@ -51,7 +51,7 @@
           "id": 7,
           "course_name": "AWS, Cloud Computing",
           "img": "https://i.ibb.co/GdJMTnZ/aws.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Amazon Web Services (AWS) is a leading cloud computing platform offering a wide range of services, allowing businesses to scale and innovate in the cloud.",
           "price": 35000,
           "credit": 5
      },
@@ -59,7 +59,7 @@
           "id": 8,
           "course_name": "Database (MySQL)",
           "img": "https://i.ibb.co/02njNmZ/mysql.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "MySQL is a popular open-source relational database management system used for storing, managing, and retrieving structured data in various applications.",
           "price": 19000,
           "credit": 5
      },
@@ -67,7 +67,7 @@
           "id": 9,
           "course_name": "Problem-Solving Part",
           "img": "https://i.ibb.co/nD4f0Th/Rectangle-2-6.png",
-          "title": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+          "title": "Problem-solving is a critical skill in all areas of life, involving identifying, analyzing, and resolving challenges or obstacles effectively and efficiently.",
           "price": 23000,
           "credit": 2
      }

@@ -37,8 +37,8 @@ const Home = () => {
                if (count > 20) {
                     return Swal.fire({
                          icon: "error",
-                         title: "",
-                         text: "",
+                         title: "Credit Limit Exist!!!",
+                         text: "#cannot add more!!",
                     });
                }
                setTotalCost(cost);
@@ -65,7 +65,7 @@ const Home = () => {
                               >
                                    <div className="p-3 space-y-4">
                                         <div className="space-y-4">
-                                             <img src={data.img} alt="" />
+                                             <img className="w-full" src={data.img} alt="" />
                                              <h1 className="font-bold text-lg">
                                                   {data.course_name}
                                              </h1>
@@ -74,9 +74,9 @@ const Home = () => {
                                              </p>
                                         </div>
                                         <div className="flex gap-2 justify-between items-center">
-                                             <p className="text-2xl">
+                                             <button className="text-2xl">
                                                   <LuDollarSign></LuDollarSign>
-                                             </p>
+                                             </button>
                                              <p>Price : {data.price}</p>
                                              <p className="text-2xl">
                                                   <BiBookOpen></BiBookOpen>
