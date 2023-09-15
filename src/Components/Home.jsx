@@ -78,9 +78,9 @@ const Home = () => {
                                                   <LuDollarSign></LuDollarSign>
                                              </button>
                                              <p>Price : {data.price}</p>
-                                             <p className="text-2xl">
+                                             <button className="text-2xl">
                                                   <BiBookOpen></BiBookOpen>
-                                             </p>
+                                             </button>
                                              <p>Credit : {data.credit}hr</p>
                                         </div>
                                         <div className=" text-center">
