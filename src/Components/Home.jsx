@@ -9,7 +9,7 @@ const Home = () => {
      const [allData, setData] = useState([]);
      const [selectedBtn, setSelectedBtn] = useState([]);
      const [totalCredit, setTotalCredit] = useState(0);
-     const [remainingCredits, setRemainingCredits] = useState(0);
+     const [remainingCredits, setRemainingCredits] = useState(20);
      const [totalCost, setTotalCost] = useState(0);
 
      useEffect(() => {
