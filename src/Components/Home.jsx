@@ -47,7 +47,6 @@ const Home = () => {
                const newData = [...selectedBtn, item];
                setSelectedBtn(newData);
           }
-          console.log(count);
      };
 
      return (
