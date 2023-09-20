@@ -1,16 +1,22 @@
+import { MdDeleteOutline } from "react-icons/md";
 
 import PropTypes from "prop-types";
-const Card = ({ selectedBtn, totalCredit, remainingCredits, totalCost }) => {
+const Card = ({ selectedBtn, totalCredit, remainingCredits, totalCost ,removeCourse }) => {
      return (
           <div className="bg-white rounded-xl p-5 space-y-5">
                <h4 className="border-b-2 text-[#2F80ED] font-semibold text-[19px] py-4">
                     Credit Hour Remaining {remainingCredits}hr
                </h4>
                <h1 className="font-bold text-2xl my-2">Course Name</h1>
-               {selectedBtn.map((btn ,index) => (
+               {selectedBtn.map((btn, index) => (
                     <div key={btn.id}>
-                         <div>
-                              <p>{index+1}. {btn.course_name} </p>
+                         <div className="flex items-center justify-between">
+                              <p>
+                                   {index + 1}. {btn.course_name}{" "}
+                              </p>
+                              <button onClick={() => removeCourse(btn.id)}>
+                                   <MdDeleteOutline></MdDeleteOutline>
+                              </button>
                          </div>
                     </div>
                ))}

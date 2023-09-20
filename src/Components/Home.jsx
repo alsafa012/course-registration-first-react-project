@@ -48,7 +48,28 @@ const Home = () => {
                setSelectedBtn(newData);
           }
      };
+     // remove courses from list
+     const removeCourse = (idx)=>{
+          const item = selectedBtn.filter(item => item.id === idx.id);
+          setSelectedBtn(item);
+          // experiment for math calculations
+         /*  const remainingCredit = item.reduce((acc, course) => course.credit + acc,0)
+          setTotalCredit(remainingCredit)
+          // const remainingCost = item.reduce((acc, course) => course.credit + acc,0)
+          // setRemainingCredits(remainingCost)
+          // const remaining = item.reduce((acc, courses) => courses.price - acc,0)
+          // setTotalCost(remaining)
+          // setRemainingCredits(remainingCredit + item.credit)
+               
+          // selectedBtn.find((item) => {
 
+          //      setTotalCredit(totalCredit - item.credit);
+          //      setRemainingCredits(remainingCredits + item.credit);
+          //      setTotalCost(totalCost - item.price);
+          // });
+
+          // setTotalCost(totalCost - selectedBtn[0].price); */
+     }
      return (
           <div className="container mx-auto bg-[#F3F3F3] ">
                <h1 className="text-center font-bold text-3xl py-10">
@@ -89,7 +110,8 @@ const Home = () => {
                                                   }
                                                   className=" w-full px-4 py-2 text-white font-bold bg-[#2F80ED] rounded-xl"
                                              >
-                                                  Select
+                                                  {/* {setSelectedBtn(!selectedBtn) ? 'Selected' : 'Select'} */}
+                                                  {selectedBtn.includes(data) ? 'Selected' : 'Select'}
                                              </button>
                                         </div>
                                    </div>
@@ -103,6 +125,7 @@ const Home = () => {
                               selectedBtn={selectedBtn}
                               remainingCredits={remainingCredits}
                               totalCredit={totalCredit}
+                              removeCourse={removeCourse}
                          ></Card>
                     </div>
 
