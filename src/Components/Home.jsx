@@ -4,18 +4,20 @@ import { BiBookOpen } from "react-icons/bi";
 import { LuDollarSign } from "react-icons/lu";
 import Card from "./Card";
 import Swal from "sweetalert2";
-
+import { Audio } from "react-loader-spinner";
 const Home = () => {
      const [allData, setData] = useState([]);
      const [selectedBtn, setSelectedBtn] = useState([]);
      const [totalCredit, setTotalCredit] = useState(0);
      const [remainingCredits, setRemainingCredits] = useState(20);
      const [totalCost, setTotalCost] = useState(0);
+     const [loading , setLoading] = useState(true);
 
      useEffect(() => {
           fetch("./data.json")
                .then((res) => res.json())
                .then((data) => setData(data));
+               setLoading(false);
      }, []);
 
      const handleSelectBtn = (item) => {
@@ -49,11 +51,11 @@ const Home = () => {
           }
      };
      // remove courses from list
-     const removeCourse = (idx)=>{
-          const item = selectedBtn.filter(item => item.id === idx.id);
+     const removeCourse = (idx) => {
+          const item = selectedBtn.filter((item) => item.id === idx.id);
           setSelectedBtn(item);
           // experiment for math calculations
-         /*  const remainingCredit = item.reduce((acc, course) => course.credit + acc,0)
+          /*  const remainingCredit = item.reduce((acc, course) => course.credit + acc,0)
           setTotalCredit(remainingCredit)
           // const remainingCost = item.reduce((acc, course) => course.credit + acc,0)
           // setRemainingCredits(remainingCost)
@@ -69,9 +71,20 @@ const Home = () => {
           // });
 
           // setTotalCost(totalCost - selectedBtn[0].price); */
-     }
+     };
      return (
           <div className="container mx-auto bg-[#F3F3F3] ">
+               {loading && <div className="flex items-center justify-center">
+                    <Audio
+                         height="80"
+                         width="80"
+                         radius="9"
+                         color="green"
+                         ariaLabel="three-dots-loading"
+                         wrapperStyle
+                         wrapperClass
+                    />
+               </div>}
                <h1 className="text-center font-bold text-3xl py-10">
                     Course Registration
                </h1>
@@ -85,7 +98,11 @@ const Home = () => {
                               >
                                    <div className="p-3 space-y-4">
                                         <div className="space-y-4">
-                                             <img className="w-full" src={data.img} alt="" />
+                                             <img
+                                                  className="w-full"
+                                                  src={data.img}
+                                                  alt=""
+                                             />
                                              <h1 className="font-bold text-lg">
                                                   {data.course_name}
                                              </h1>
@@ -111,7 +128,9 @@ const Home = () => {
                                                   className=" w-full px-4 py-2 text-white font-bold bg-[#2F80ED] rounded-xl"
                                              >
                                                   {/* {setSelectedBtn(!selectedBtn) ? 'Selected' : 'Select'} */}
-                                                  {selectedBtn.includes(data) ? 'Selected' : 'Select'}
+                                                  {selectedBtn.includes(data)
+                                                       ? "Selected"
+                                                       : "Select"}
                                              </button>
                                         </div>
                                    </div>
@@ -128,7 +147,6 @@ const Home = () => {
                               removeCourse={removeCourse}
                          ></Card>
                     </div>
-
                </div>
           </div>
      );
