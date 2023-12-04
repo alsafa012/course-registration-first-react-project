@@ -3,6 +3,7 @@ import { MdDeleteOutline } from "react-icons/md";
 import PropTypes from "prop-types";
 const Card = ({ selectedBtn, totalCredit, remainingCredits, totalCost ,removeCourse }) => {
      return (
+     // return (
           <div className="bg-white rounded-xl p-5 space-y-5">
                <h4 className="border-b-2 text-[#2F80ED] font-semibold text-[19px] py-4">
                     Credit Hour Remaining {remainingCredits}hr
